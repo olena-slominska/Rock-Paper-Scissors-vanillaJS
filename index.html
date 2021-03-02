@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/CSSReset.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header-gameName">
+          <ul class="header-gameName_list">
+            <li>ROCK</li>
+            <li>PAPER</li>
+            <li>SCISSORS</li>
+            <li>LIZARD</li>
+            <li>SPOCK</li>
+          </ul>
+        </div>
+        <div class="header-scoreBox">
+          <div class="header-scoreBox_title">SCORE</div>
+          <div class="header-scoreBox_score">0</div>
+        </div>
+      </header>
+      <div class="section choice">
+        <div class="choice-pentagon">
+          <img src="images/bg-pentagon.svg" alt="pentagon" />
+
+          <div class="choice-items">
+            <div class="choice-item choice-items_rock" id="rock"></div>
+            <div class="choice-item choice-items_paper" id="paper"></div>
+            <div class="choice-item choice-items_scissors" id="scissors"></div>
+            <div class="choice-item choice-items_lizard" id="lizard"></div>
+            <div class="choice-item choice-items_spock" id="spock"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section play">
+        <div class="play-myChoice">
+          <p class="play-myChoice_text">You picked</p>
+          <div class="play-myChoice_img"></div>
+        </div>
+        <div class="play-houseChoice">
+          <p class="play-houseChoice_text">The house picked</p>
+          <div class="play-houseChoice_img"></div>
+        </div>
+      </div>
+      <div class="section gameResult">
+        <div class="gameResult-text"></div>
+        <button class="gameResult-button">Play again</button>
+      </div>
+      <footer class="footer">
+        <a href="#modal" class="footer-rulesModal">Rules</a>
+      </footer>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-body">
+        <div class="modal-content">
+          <a href="##" class="modal-content_close">
+            <img
+              src="./images/icon-close.svg"
+              alt="close-icon"
+              class="modal-content_close"
+            />
+          </a>
+          <div class="modal-content_title">RULES</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
