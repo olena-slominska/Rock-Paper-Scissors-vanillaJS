@@ -116,6 +116,7 @@ function restartGame() {
   houseChoiceImg.classList.remove(
     houseChoiceImg.classList[houseChoiceImg.classList.length - 1]
   );
+  houseChoiceImg.style.backgroundColor = "hsl(240, 65%, 13%)";
   result.innerHTML = "";
   choiceDiv.style.display = "flex";
   restart.style.display = "none";
