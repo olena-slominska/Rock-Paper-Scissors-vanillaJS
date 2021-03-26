@@ -1,3 +1,8 @@
+//TODO add RESET button for state reset, add favicon icon,  change VARIANTS
+
+const openModal = document.querySelector("[data-open]");
+const closeModal = document.querySelector(".modal-content_close");
+const modal = document.getElementById("modal");
 const choices = document.querySelectorAll(".choice-item");
 const scoreDiv = document.querySelector(".header-scoreBox_score");
 const resultDiv = document.querySelector(".gameResult");
@@ -133,3 +138,24 @@ function restartGame() {
   playDiv.style.display = "none";
   resultDiv.style.display = "none";
 }
+openModal.addEventListener("click", () => {
+  modal.classList.add("is-visible");
+});
+closeModal.addEventListener("click", () => {
+  document.querySelector(".modal.is-visible").classList.remove("is-visible");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    e.target === document.querySelector(".modal.is-visible") ||
+    e.target === document.querySelector(".modal-body")
+  ) {
+    document.querySelector(".modal").classList.remove("is-visible");
+  }
+});
+
+document.addEventListener("keyup", (e) => {
+  if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+    document.querySelector(".modal.is-visible").classList.remove("is-visible");
+  }
+});

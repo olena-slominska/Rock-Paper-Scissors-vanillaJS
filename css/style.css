@@ -5,7 +5,7 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +27,7 @@ body {
   justify-content: start;
   color: #ffffff;
   position: relative;
+  /* box-sizing: border-box; */
 }
 .header {
   margin-top: 2em;
@@ -40,6 +41,7 @@ body {
 }
 .header-gameName_list li {
   list-style-type: none;
+  font-size: 1.15em;
 }
 .header-scoreBox {
   display: flex;
@@ -53,7 +55,6 @@ body {
 }
 
 .header-scoreBox_title {
-  font-size: 0.9em;
   color: var(--score-text);
 }
 .header-scoreBox_score {
@@ -87,10 +88,7 @@ body {
   background-color: #fff;
   border-radius: 50%;
 }
-.choice-item:hover {
-  cursor: pointer;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
-}
+
 
 #rock,
 .rock {
@@ -152,7 +150,9 @@ body {
 .choice-items_spock {
   transform: translate(-10em, -16em);
 }
-
+.choice-item:hover {
+  cursor: pointer;
+}
 .play {
   display: none;
   justify-content: space-around;
@@ -208,17 +208,19 @@ body {
   color: var(--dark-text, 0.5);
 }
 .footer {
+  position: absolute;
   bottom: 1em;
-  right: 5em;
-  width: 100%;
+  right: 8em;
+  width: 7em;
   min-height: 1.5em;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin: 5em 0 1em 0;
 }
-.footer-rulesButton {
-  margin-right: 3em;
-  width: 7em;
+.footer-rulesButton_open {
+  width: 80px;
+  height: auto;
   color: #fff;
   background-color: transparent;
   border-radius: 0.72em;
@@ -227,7 +229,7 @@ body {
   text-align: center;
   padding: 0.5em 0;
 }
-.footer-rulesButton:hover {
+.footer-rulesButton_open:hover {
   cursor: pointer;
   color: var(--dark-text);
   background-color: #fff;
@@ -242,10 +244,11 @@ body {
   opacity: 0;
   visibility: hidden;
 }
-.modal:target {
-  opacity: 1;
+.modal.is-visible {
   visibility: visible;
+  opacity: 1;
 }
+
 .modal-body {
   min-height: 90%;
   display: flex;
@@ -277,22 +280,37 @@ body {
   margin-left: 1em;
 }
 .modal-content_close {
-  margin-left: 85%;
-}
-
-@media (max-width: 655px) {
-  .play-myChoice_img,
-  .play-houseChoice_img {
-    width: 8em;
-    height: 8em;
-  }
+  background-color: transparent;
+  margin-left: 90%;
+  cursor: pointer;
 }
 @media (max-width: 769px) {
   .choice-item {
     width: 9em;
     height: 9em;
   }
+  .footer {
+    right: 4em;
+  
+  }
 }
+@media (max-width: 655px) {
+  .play-myChoice_img,
+  .play-houseChoice_img {
+    width: 8em;
+    height: 8em;
+  }
+  .choice {
+    margin-top: .9em;
+  }
+  .footer {
+    right: 4em;
+    width: 50px;
+    height: 25px;
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 481px) {
   .choice-item {
     width: 7em;
@@ -321,10 +339,9 @@ body {
     font-size: 2em;
   }
   .footer {
-    margin-bottom: 2em;
-    justify-content: center;
+    margin-bottom: 4em;
+    right: 4em;
   }
-  .footer-rulesButton {
-    margin-right: 0em;
-  }
+ 
+ 
 }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
       rel="stylesheet"
@@ -34,7 +36,7 @@
         <div class="choice-pentagon">
           <img
             src="images/bg-pentagon.svg"
-            alt="pentagon-for-the-five-choice-cards"
+            alt="pentagon"
           />
 
           <div class="choice-items">
@@ -58,22 +60,22 @@
       </div>
       <div class="section gameResult">
         <div class="gameResult-text"></div>
-        <button class="gameResult-button">Play again</button>
+        <button class="gameResult-button" type="button" >Play again</button>
       </div>
       <footer class="footer">
-        <a href="#modal" class="footer-rulesButton">Rules</a>
+        <button class="footer-rulesButton_open" data-open="modal" type='button'>Rules</button>
       </footer>
     </div>
     <div id="modal" class="modal">
       <div class="modal-body">
         <div class="modal-content">
-          <a href="#" class="modal-content_close">
+          <button class="modal-content_close" aria-label="close modal" data-close>
             <img
               src="./images/icon-close.svg"
-              alt="close-icon"
-              class="modal-content_close"
+              alt="close popup icon"
+              
             />
-          </a>
+          </button>
           <div class="modal-content_title">RULES</div>
         </div>
       </div>
